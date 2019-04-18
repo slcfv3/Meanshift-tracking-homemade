@@ -40,15 +40,15 @@ while(ret):#loop from the first frame to last frame in video
                 m01+=i*ax
                 m00+=ax
         try:
-            fx_next=int(m01/m00)+fy-(y1-y2)/2#calculate new center of mass
-            fy_next=int(m10/m00)+fx-(x1-x2)/2
-            if(fx_next==fy and fy_next==fx):#check if new center of mass matches the old one
-                fy=fx_next
-                fx=fy_next
+            fx_new=int(m01/m00)+fy-(y1-y2)/2#calculate new center of mass
+            fy_new=int(m10/m00)+fx-(x1-x2)/2
+            if(fx_new==fy and fy_new==fx):#check if new center of mass matches the old one
+                fy=fx_new
+                fx=fy_new
                 break
             else:
-                fy=fx_next
-                fx=fy_next
+                fy=fx_new
+                fx=fy_new
         except:
             break
             
