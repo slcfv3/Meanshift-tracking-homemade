@@ -7,15 +7,15 @@ imgnum=input() #enable the users to choose the video they want to apply meanshif
    
 if imgnum=='1':
             cap=cv2.VideoCapture("goldfish.avi")
-            x1, y1, x2, y2 = 400, 375,300,275 #initialize the original positions
+            x1, y1, x2, y2 = 400, 375,300,275 #initialize the original positions of tracker
 
 if imgnum=='2':
             cap=cv2.VideoCapture("goldfish2.avi")
             x1, y1, x2, y2 = 400, 400,300,300
 
 
-w=x1-x2 #width of roi
-h=y1-y2 #height of roi
+w=x1-x2 #width of tracking window
+h=y1-y2 #height of tracking window
 
 fx=x2+w/2
 x1=fx
