@@ -29,7 +29,7 @@ while(ret):#loop from the first frame to last frame in video
     if ret==0:
         break
     while(1):
-        roi=img2[int(fy-(y1-y2)/2):int(fy+(y1-y2)/2),int(fx-(x1-x2)/2):int(fx+(x1-x2)/2)]#读取窗口内数据
+        roi=img2[int(fy-(y1-y2)/2):int(fy+(y1-y2)/2),int(fx-(x1-x2)/2):int(fx+(x1-x2)/2)]#calculate the roi
         m10=0#initialize the moments
         m01=0
         m00=0
